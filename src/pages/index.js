@@ -1,12 +1,13 @@
-export { Home } from "./Home";
-export { Admin } from "./Admin";
+export { Home } from "./Home/Home";
 
-export { ProductList } from "./ProductList";
-export { ProductDetail } from "./ProductDetail";
+export { SolarData } from "./solarData/SolarData";
 
-export { Contact } from "./Contact/Contact";
-export { ContactIn } from "./Contact/ContactIn";
-export { ContactUs } from "./Contact/ContactUs";
-export { ContactEu } from "./Contact/ContactEu";
+export { ModifyDataPage } from "./addUpdateSystemList/ModifyDataPage";
 
-export { PageNotFound } from "./PageNotFound";
+export { UtilityHome } from "./utilityData/UtilityHome";
+
+export { CurtailmentHome, CurtailmentAdd } from "./curtailmentData";
+
+export {ListAddHome } from './systemList';
+
+export {WeatherHome} from './weatherData';

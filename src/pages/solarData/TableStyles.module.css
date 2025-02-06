@@ -1,0 +1,60 @@
+
+/* Apply to the parent container */
+.Ncontainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5px;
+  }
+  
+  /* Bold text for the p tag */
+  .boldText {
+    font-weight: bold;
+    margin-right: 8px; /* Space between p tag and logger names */  
+  }
+  .textsize{
+    font-size: 13px;
+  }
+  /* Styling for the logger names */
+  .loggerName {
+    margin-right: 8px; /* Space between each logger name */
+    line-height: 1.5; /* Minimize space between lines if logger name breaks */
+  }
+
+
+/* Style the toggle container */
+.toggleContainer {
+    display: flex;
+    justify-content: right;
+    margin-right: 4px;
+}
+
+.toggleButton {
+    background: none;
+    border: 2px solid blue;
+    color: blue;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-right: 5px;
+    padding: 4px 10px;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition for changes */
+}
+    
+.toggleButton:hover {
+    background-color: blue;
+    color: white;
+}
+    
+.toggleButton.active {
+    background-color: blue;
+    color: white;
+    border-color: blue;
+    font-weight: bold; /* Make active button text bold */
+}
+    
+.toggleButton:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 3px rgba(0, 0, 255, 0.3); /* Add custom focus shadow */
+}
+

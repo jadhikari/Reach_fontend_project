@@ -1,14 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from "react-router-dom";
-import './index.css';
+import { createRoot } from 'react-dom/client';
 import App from './App';
+import './index.css';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+// Import Bootstrap CSS
+import "bootstrap/dist/css/bootstrap.min.css";
+// Import Bootstrap Bundle JS (includes Popper)
+import "bootstrap/dist/js/bootstrap.bundle.min";
+
+// Create a root container for the React application
+const container = document.getElementById('root');
+const root = createRoot(container);
+
+// Render the main App component
 root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>
+  // Uncomment StrictMode if needed
+  // <React.StrictMode>
+    <App />
+  // </React.StrictMode>
 );

@@ -1,0 +1,145 @@
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header {
+  flex-shrink: 0;
+  background-color: #afd1f3;
+  border-bottom: 1px solid #01080f;
+  height: 55px;
+}
+
+.header img {
+  height: 45px;
+  margin-left: 15px;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  position: fixed;
+  top: 55px; /* Adjust based on header height */
+  bottom: 0;
+  width: 150px; /* Full sidebar width */
+  background-color: #afd1f3;
+  border-right: 1px solid #01080f;
+  transition: width 0s ease;
+  z-index: 1000; /* Ensure it stays above other elements */
+}
+
+.sidebar.collapsed {
+  width: 50px; /* Width when collapsed */
+}
+
+.main-content {
+  flex: 1;
+  margin-top: 80px; /* Adjust based on header height */
+  margin-left: 150px; /* Default margin to align with expanded sidebar */
+  transition: margin-left 0.3s ease; /* Smooth transition */
+}
+
+.sidebar.collapsed + .main-content {
+  margin-left: 70px; /* Adjust margin when sidebar is collapsed */
+}
+
+/* Optional: Responsive layout for smaller screens */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 60px;
+  }
+
+  .main-content {
+    margin-left: 60px;
+  }
+}
+
+
+.sidebar-toggle {
+  cursor: pointer;
+  margin-top: 15px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-size: 22px;
+  padding-right: 5%;
+}
+
+.sidebar.collapsed .sidebar-toggle {
+  padding-right: 35%;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 15px;
+  padding-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-item:hover {
+  color: rgb(0, 0, 0);
+}
+
+.nav-item.active {
+  background-color: white;
+  color: rgb(0, 0, 0);
+}
+
+.nav-icon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.sidebar.collapsed .nav-icon {
+  margin-right: 0px;
+}
+
+.sidebar.collapsed .nav-item span {
+  display: none;
+}
+
+.flex-column {
+  margin-top: 20px;
+}
+
+
+
+.sticky-part {
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 55px;
+  z-index: 100; /* Ensure it's above other elements */
+  background-color: white; /* Optional: gives a background so it's visible */
+  padding: 4px; /* Optional: for spacing */
+}
+
+.sticky-sub-part {
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 155px;
+  z-index: 100; /* Ensure it's above other elements */
+  background-color: white; /* Optional: gives a background so it's visible */
+  padding: 0px; /* Optional: for spacing */
+}
+
+  
+/* Styling the table header */
+.list-table th {
+  background-color: #afd1f3; /* Light background for headers */
+  font-weight: bold; /* Make header text bold */
+  position: sticky; /* Make the header sticky */
+  top: 0; /* Keep it at the top of the container */
+  z-index: 1; /* Ensure the header stays above the table body */
+}
+
+/* Styling the table header */
+.th-table th {
+  background-color: #afd1f3; /* Light background for headers */
+  font-weight: bold; /* Make header text bold */
+}
+  

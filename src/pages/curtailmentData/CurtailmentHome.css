@@ -1,0 +1,48 @@
+
+  .search-box-wrapper {
+    margin-bottom: 20px;
+    width: 100%;
+    position: relative; /* Ensure dropdown can be positioned absolutely */
+    z-index: 10; /* Increase z-index if necessary */
+  }
+  
+  .table-container {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 20px;
+  }
+  .dropdown {
+    position: absolute;
+    z-index: 1000; /* Very high to ensure it appears above the table */
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .sticky-column {
+    position: sticky;
+    left: 0;
+    background-color: #f8f9fa;
+    z-index: 1;
+  }
+  
+  .date-header {
+    position: sticky;
+    top: 0;
+    background-color: #f8f9fa;
+    z-index: 1;
+  }
+  
+  @media (max-width: 768px) {
+    /* Adjust padding for smaller screens */
+    .curtailment-content {
+      padding: 10px;
+    }
+  
+    .table-container {
+      max-height: 200px;
+    }
+  }
+  
